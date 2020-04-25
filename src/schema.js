@@ -14,7 +14,6 @@ const typeDefs = gql`
 
   type Query {
     digital: Digital
-    DHT: DHT
     sensorDHT(pin: String): DHT
   }
 

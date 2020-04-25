@@ -3,7 +3,7 @@ const Gpio = require("pigpio").Gpio;
 
 const resolvers = {
   Query: {
-    sensorDHT: async (root, args) => {
+    DHT: async (root, args) => {
       const { pin } = await args;
       const led = new Gpio(pin, { mode: Gpio.OUTPUT });
       led.digitalWrite(state);
