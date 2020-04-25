@@ -7,8 +7,9 @@ const resolvers = {
     DHT: async (root, args) => {
       const { pin } = await args;
       const res = await dht.read(11, pin);
-      console.log(res);
-      return { temperature: 32.5, humidity: 52, pin: pin };
+      const temperature = (Math.random() * 100).toFixed(2);
+      const humidity = (Math.random() * 100).toFixed(2);
+      return { temperature, humidity, pin: pin };
     },
   },
 
