@@ -6,8 +6,14 @@ const typeDefs = gql`
     pin: Int
   }
 
+  type Sensor {
+    state: Any
+    pin: Int
+  }
+
   type Query {
     digital: Digital
+    sensorDHT(pin: String): Sensor
   }
 
   type Mutation {
