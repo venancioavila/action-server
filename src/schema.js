@@ -6,14 +6,16 @@ const typeDefs = gql`
     pin: Int
   }
 
-  type Sensor {
-    state: Any
+  type DHT {
+    temperature: Float
+    humidity: Float
     pin: Int
   }
 
   type Query {
     digital: Digital
-    sensorDHT(pin: String): Sensor
+    DHT: DHT
+    sensorDHT(pin: String): DHT
   }
 
   type Mutation {
