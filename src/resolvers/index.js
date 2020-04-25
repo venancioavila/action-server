@@ -5,9 +5,10 @@ const resolvers = {
   Mutation: {
     turnOnOff: async (root, args) => {
       const { state, pin } = await args;
-      const led = new Gpio(pin, { mode: Gpio.OUTPUT });
-      led.digitalWrite(state);
-      console.log(`Actived led on GPIO ${pin}`);
+      console.log(args);
+      // const led = new Gpio(pin, { mode: Gpio.OUTPUT });
+      // led.digitalWrite(state);
+      // console.log(`Actived led on GPIO ${pin}`);
       return args;
     },
   },
