@@ -11,7 +11,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    turnOnOff(state: Int, pin: Int): Digital
+    digital(state: Int, pin: Int): Digital
+    mudular(state: Int, pin: Int): Digital
   }
 `;
 
