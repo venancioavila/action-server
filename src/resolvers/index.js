@@ -8,7 +8,7 @@ const resolvers = {
       const { pin } = await args;
       const res = await dht.read(11, pin);
       console.log(res);
-      return { temperature: 100.0, humidity: 100.0, pin: pin };
+      return { temperature: 32.5, humidity: 52, pin: pin };
     },
   },
 
