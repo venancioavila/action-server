@@ -14,7 +14,7 @@ const typeDefs = gql`
 
   type Query {
     digital: Digital
-    DHT(pin: String): DHT
+    DHT(pin: Int): DHT
   }
 
   type Mutation {
