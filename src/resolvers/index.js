@@ -30,15 +30,11 @@ const resolvers = {
     },
     servo: async (root, args) => {
       const { state, pin } = await args;
-
       const servo = new Gpio(pin, {
         mode: Gpio.OUTPUT,
       });
-
       servo.servoWrite(state);
-
       console.log(`Servo run ${pin}`);
-      
       return args;
     },
   },
