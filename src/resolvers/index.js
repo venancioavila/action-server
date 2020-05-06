@@ -28,6 +28,10 @@ const resolvers = {
       console.log(`Actived led on GPIO ${pin}`);
       return args;
     },
+    servo: async (root, args) => {
+      console.log(args);
+      return args;
+    },
   },
 };
 

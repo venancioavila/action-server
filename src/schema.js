@@ -12,6 +12,11 @@ const typeDefs = gql`
     pin: Int
   }
 
+  type Servo {
+    state: Int
+    pin: Int
+  }
+
   type Query {
     digital: Digital
     DHT(pin: Int): DHT
@@ -20,6 +25,7 @@ const typeDefs = gql`
   type Mutation {
     digital(state: Int, pin: Int): Digital
     modular(state: Int, pin: Int): Digital
+    servo(state: Int, pin: Int): Servo
   }
 `;
 
