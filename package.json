@@ -6,7 +6,7 @@
   },
   "main": "./bin/index.js",
   "bin": {
-    "raspberry": "./src/index.js"
+    "action-server": "./src/index.js"
   },
   "dependencies": {
     "apollo-server": "^2.11.0",
