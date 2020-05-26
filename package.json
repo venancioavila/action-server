@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "server": "node src/index.js"
   },
   "dependencies": {
     "apollo-server": "^2.11.0",
