@@ -1,12 +1,12 @@
 {
   "name": "action-server",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon ./bin/index.js"
   },
   "main": "./bin/index.js",
   "bin": {
-    "action-server": "./src/index.js"
+    "action-server": "./bin/index.js"
   },
   "dependencies": {
     "apollo-server": "^2.11.0",
