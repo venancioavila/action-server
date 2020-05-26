@@ -10,12 +10,7 @@
   },
   "dependencies": {},
   "keywords": [],
-<<<<<<< HEAD
-  "author": "Venancio Ávila",
-  "license": "NFR"
-=======
   "author": "Venancio",
   "license": "MIT",
   "dependencies": {}
->>>>>>> 0ac331129ac1c7e9445d6262113ab96a624d9619
 }
