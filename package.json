@@ -1,6 +1,12 @@
 {
+  "name": "action-server",
+  "version": "1.0.0",
   "scripts": {
     "start": "nodemon src/index.js"
+  },
+  "main": "./bin/index.js",
+  "bin": {
+    "raspberry": "./src/index.js"
   },
   "dependencies": {
     "apollo-server": "^2.11.0",
@@ -14,5 +20,9 @@
     "nodemon": "^2.0.2",
     "pigpio": "^3.1.0",
     "systeminformation": "^4.23.5"
-  }
+  },
+  "keywords": [],
+  "author": "Venancio Ávila",
+  "license": "NFR",
+  "dependencies": {}
 }
