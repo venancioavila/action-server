@@ -12,5 +12,5 @@ const server = new ApolloServer({ typeDefs, resolvers });
 // The `listen` method launches a web server.
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
   console.log(`⚡  Server running...`);
-  console.log(`%c ➡️ ${IP.address()} `, "background: #222; color: #bada55");
+  console.log(`➡️  ${IP.address()} `);
 });
