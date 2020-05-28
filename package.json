@@ -10,6 +10,7 @@
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "graphql": "^15.0.0",
+    "ip": "^1.1.5",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.7",
     "node-dht-sensor": "^0.4.1",
