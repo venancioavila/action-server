@@ -11,6 +11,11 @@ const resolvers = {
       const humidity = (Math.random() * 100).toFixed(2);
       return { temperature, humidity, pin: pin };
     },
+
+    ultrasonic: async (root, args) => {
+      const { echo, trigger } = await args;
+      return {distance: 0}
+    }
   },
 
   Mutation: {

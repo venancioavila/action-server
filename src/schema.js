@@ -12,6 +12,10 @@ const typeDefs = gql`
     pin: Int
   }
 
+  type Ultrasonic {
+    distance: Int
+  }
+
   type Servo {
     state: Int
     pin: Int
@@ -20,6 +24,7 @@ const typeDefs = gql`
   type Query {
     digital: Digital
     DHT(pin: Int): DHT
+    ultrasonic(echo: Int, trigger: int): Ultrasonic
   }
 
   type Mutation {
