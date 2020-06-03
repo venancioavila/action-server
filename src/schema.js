@@ -24,7 +24,7 @@ const typeDefs = gql`
   type Query {
     digital: Digital
     DHT(pin: Int): DHT
-    ultrasonic(echo: Int, trigger: int): Ultrasonic
+    ultrasonic(echo: Int, trigger: Int): Ultrasonic
   }
 
   type Mutation {
