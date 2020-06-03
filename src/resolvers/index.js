@@ -15,10 +15,10 @@ const resolvers = {
     ultrasonic: async (root, args) => {
       const { echo, trigger } = await args;
       const MICROSECDONDS_PER_CM = 1e6/34321;
-      const trigger = new Gpio(trigger, {mode: Gpio.OUTPUT});
+      const trgr = new Gpio(trigger, {mode: Gpio.OUTPUT});
       const echo = new Gpio(echo, { mode: Gpio.INPUT, alert: true });
 
-      trigger.digitalWrite(0);
+      trgr.digitalWrite(0);
 
       const watchHCSR04 = () => {
         let startTick;
