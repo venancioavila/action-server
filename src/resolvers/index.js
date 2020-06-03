@@ -20,6 +20,8 @@ const resolvers = {
 
       trgr.digitalWrite(0);
 
+      console.log("aqui")
+
       const watchHCSR04 = () => {
         let startTick;
        
