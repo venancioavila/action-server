@@ -16,14 +16,14 @@ const resolvers = {
       const { echo, trigger } = await args;
       const MICROSECDONDS_PER_CM = 1e6/34321;
       const trgr = new Gpio(trigger, {mode: Gpio.OUTPUT});
-      const echo = new Gpio(echo, { mode: Gpio.INPUT, alert: true });
+      const ech = new Gpio(echo, { mode: Gpio.INPUT, alert: true });
 
       trgr.digitalWrite(0);
 
       const watchHCSR04 = () => {
         let startTick;
        
-        echo.on('alert', (level, tick) => {
+        ech.on('alert', (level, tick) => {
           if (level == 1) {
             startTick = tick;
           } else {
