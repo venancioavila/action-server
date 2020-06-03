@@ -26,6 +26,7 @@ const resolvers = {
         let startTick;
        
         ech.on('alert', (level, tick) => {
+          console.log(level, tick)
           if (level == 1) {
             startTick = tick;
           } else {
