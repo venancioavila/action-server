@@ -37,6 +37,10 @@ const resolvers = {
       };
 
       watchHCSR04();
+
+      setInterval(() => {
+        trgr.trigger(10, 1); // Set trigger high for 10 microseconds
+      }, 1000);
       
       return {distance: 0}
     }
