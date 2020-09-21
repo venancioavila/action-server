@@ -14,19 +14,17 @@ const resolvers = {
 
     ultrasonic: async (root, args) => {
       const { echo, trigger } = await args;
-      const MICROSECDONDS_PER_CM = 1e6/34321;
-      const trgr = new Gpio(trigger, {mode: Gpio.OUTPUT});
+      const MICROSECDONDS_PER_CM = 1e6 / 34321;
+      const trgr = new Gpio(trigger, { mode: Gpio.OUTPUT });
       const ech = new Gpio(echo, { mode: Gpio.INPUT, alert: true });
 
       trgr.digitalWrite(0);
 
-      console.log("aqui")
-
       const watchHCSR04 = () => {
         let startTick;
-       
-        ech.on('alert', (level, tick) => {
-          console.log(level, tick)
+
+        ech.on("alert", (level, tick) => {
+          console.log(level, tick);
           if (level == 1) {
             startTick = tick;
           } else {
@@ -42,9 +40,9 @@ const resolvers = {
       setInterval(() => {
         trgr.trigger(10, 1); // Set trigger high for 10 microseconds
       }, 1000);
-      
-      return {distance: 0}
-    }
+
+      return { distance: 0 };
+    },
   },
 
   Mutation: {
