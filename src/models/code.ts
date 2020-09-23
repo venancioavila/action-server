@@ -1,6 +1,6 @@
-const mongoose = require("../database");
+import mongoose from '../database';
 
-var CodeSchema = new mongoose.Schema({
+const CodeSchema = new mongoose.Schema({
   userId: {
     type: String,
     required: true,
@@ -15,6 +15,4 @@ var CodeSchema = new mongoose.Schema({
   },
 });
 
-const Code = mongoose.model("Code", CodeSchema);
-
-module.exports = Code;
+export default mongoose.model("Code", CodeSchema);
